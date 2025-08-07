@@ -21,7 +21,7 @@
 
 
 
-module top(
+module press_btn_to_turn_ON_LED(
     input logic clk,  //name need to match constraint file
     input logic sw0,
     input logic btn0,
