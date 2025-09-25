@@ -48,10 +48,10 @@ logic btn0;
 top dut(
     .clk     (clk),
     .ck_rst  (ck_rst),
-    .data_in (data_in),
+    //.data_in (data_in),
     .btn0    (btn0),
-    .tx      (tx),
-    .busy    (busy)
+    .uart_rxd_out      (tx)
+    //.busy    (busy)
 );
 
 

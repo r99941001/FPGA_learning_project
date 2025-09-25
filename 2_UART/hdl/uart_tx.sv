@@ -7,7 +7,7 @@ module uart_tx #(
     input  logic rst,             // Active-low reset
     input  logic [7:0] data_in,
     input  logic send,
-    output logic tx,    
+    output logic tx,  
     output logic busy             // High when actively sending
 );
 
@@ -17,6 +17,7 @@ localparam integer CLKS_PER_BIT = CLK_FREQ / BAUD_RATE; // 868 clk per bit
 logic [FRAME_WIDTH-1:0] shift_reg;          // Shift register holds frame bits
 logic [$clog2(CLKS_PER_BIT)-1:0] baud_cnt;  // Counter for baud timing
 logic [$clog2(FRAME_WIDTH+1)-1:0] bit_cnt;  // Counts how many bits sent
+
 
 // --------------------------------------------------
 // UART line behavior

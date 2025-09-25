@@ -1,7 +1,7 @@
 module button (
     input logic clk,
     input logic btn0,
-    output logic send
+    output logic btn_out
 );
 
 logic btn_ff1;
@@ -25,7 +25,7 @@ always_ff @( posedge clk) begin
     else if (btn_ff3 == btn_ff2 && counter == COUNT_MAX-1) btn_filter <=btn_ff3;
     else if (btn_ff3 != btn_ff2) counter <=0;
     
-    send <= btn_filter;
+    btn_out <= btn_filter;
     
 end
     
