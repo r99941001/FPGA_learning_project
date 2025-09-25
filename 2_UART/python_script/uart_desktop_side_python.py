@@ -3,7 +3,7 @@ import serial
 def main():
     # Change COM3 to the COM port your UART adapter uses
     # Baudrate must match your FPGA/device UART setting
-    print("start receive data from FPGM test")
+    print("start receive data from FPGM")
     ser = serial.Serial(port="COM5", baudrate=115200, timeout=1)
 
     print(f"Listening on {ser.port} at {ser.baudrate} baud...")
