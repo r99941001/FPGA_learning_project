@@ -3,6 +3,7 @@ module top (
     input logic ck_rst,
     //input logic [7:0] data_in,
     input logic btn0,
+    input logic uart_txd_in,
     output logic uart_rxd_out
     //output logic busy
 );
